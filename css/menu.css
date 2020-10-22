@@ -368,6 +368,7 @@ body {
 #bcCredits #dps, #bcCredits #univ {
     position: absolute;
     top: 50%;
+    background-color: lightgray;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
