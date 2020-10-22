@@ -64,9 +64,9 @@ var menu = (function() {
      */
     this.showTitleButtons = function() {
         document.getElementById("bcSubtitle").innerHTML = 
-            "<span class='button' onclick='menu.showLevels(); if (xp) { xp.logDebutPartie(); }'>Jouer</span>" + 
-            "<span class='button' onclick='menu.showOptions()'>Options</span>" + 
-            "<span class='button' onclick='menu.showCredits()'>Crédits</span>";
+            "<button class='button' onclick='menu.showLevels(); if (xp) { xp.logDebutPartie(); }'>Play</button>" + 
+            "<button class='button' onclick='menu.showOptions()'>Options</button>" + 
+            "<button class='button' onclick='menu.showCredits()'>Credits</button>";
     }
 
     /**
@@ -175,11 +175,11 @@ var menu = (function() {
         switch (elt.id) {
             case "optMusiqueOui": 
                 activerMusique = true;
-                music.play();
+                if (music) music.play();
                 break;
             case "optMusiqueNon": 
                 activerMusique = false;
-                music.pause();
+                if (music) music.pause();
                 break;
             case "optBruitagesOui": 
                 activerBruitages = true;
