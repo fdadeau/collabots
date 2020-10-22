@@ -146,7 +146,6 @@ var contentToCache = [
     './js/Robot.js',
     './js/Stage.js',
     './js/Teleporter.js',
-    './js/xp.js',
 // manifest.json
     './manifest.json'
 ];

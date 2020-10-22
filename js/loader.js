@@ -31,12 +31,12 @@ function loadAssets()
     createjs.Sound.registerPlugins([createjs.HTMLAudioPlugin]);
 	sounds.installPlugin(createjs.Sound);
 	createjs.Sound.alternateExtensions = ['mp3'];
-    document.getElementById("bcSubtitle").innerHTML = "Chargement des sons...";
+    document.getElementById("bcSubtitle").innerHTML = "Loading sounds...";
 	sounds.addEventListener('complete', function() {
         // Chargement images
         console.log("loading graphics...");
 	    images = new createjs.LoadQueue(false);
-        document.getElementById("bcSubtitle").innerHTML = "Chargement des images...";
+        document.getElementById("bcSubtitle").innerHTML = "Loading graphics...";
         images.addEventListener('complete', function() {
             menu.showTitleButtons();
             draw();

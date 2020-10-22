@@ -23,30 +23,30 @@ var levels = [
 	  angle: [0, 0],
 	  // Liste des messages, positions, temps avant le prochain
 	  messages: [
-          {m: 'Niveau 1'},
-		  {m: 'Amenez chaque robot à sa destination.', l: '60%', t: '60%', s: 500},
+          {m: 'Level 1'},
+		  {m: 'Drive each robot to its destination.', l: '60%', t: '60%', s: 500},
 		  {
-			m: 'Pour programmer votre robot, utilisez l\'icône <img src="./assets/img/gear_red.png" class="icone">',
+			m: 'To program your robot, use the <img src="./assets/img/gear_red.png" class="icone"> icon.',
 			l: '20%',
 			t: '40%',
 			s: 1500
 		  },
 		  {
-			m: 'Pour faire avancer votre robot, utilisez l\'instruction <img src="./assets/img/forward_red.png" class="icone">',
+			m: 'To make your robot go forward, use the <img src="./assets/img/forward_red.png" class="icone"> icon.',
 			l: '10%',
 			t: 't'
 		  },
 		  {
-			m: 'En cas d\'erreur, utilisez <img src="./assets/img/undo_red.png" class="icone"> pour effacer.',
+			m: 'In case of error, use the <img src="./assets/img/undo_red.png" class="icone"> icon to erase.',
 			l: '10%',
 			t: 't'
 		  },
 		  {
-			m: 'Pour exécuter le programme, appuyez sur le bouton <img src="./assets/img/launch.png" class="icone">',
+			m: 'To run the program, press the <img src="./assets/img/launch.png" class="icone"> button.',
 			l: '10%',
 			t: 't'
 		  },
-		  {m: 'C\'est parti !', l: 'l', t: 't', s: 500}
+		  {m: 'Let\'s go!', l: 'l', t: 't', s: 500}
 	  ],
 	  // Nombre d'actions pour reussir parfaitement
 	  nbActionTotal: 8, 
@@ -68,13 +68,13 @@ var levels = [
 	  end: [[1, 3], [1, 1]],
 	  angle: [0, 0],
 	  messages: [
-		  {m: 'Niveau 2', l: '42%', t: '40%', s: 1000},
-		  {m: 'Il va falloir tourner maintenant !', l: 'l', t: 't', s: 1500},
-		  {m: '<img src="./assets/img/rotate_right_red.png" class="icone"> permet de tourner d\'un 1/4 de tour à droite', l: 'l', t: 't', s: 1500},
-		  {m: '<img src="./assets/img/rotate_left_red.png" class="icone"> permet de tourner d\'un 1/4 de tour à gauche', l: 'l', t: 't', s: 1500},
-		  {m: 'Attention : quand le robot tourne, il reste sur place.', l: 'l', t: 't', s: 1500},
-		  {m: 'Les motifs au sol sont là pour vous aider.', l: 'l', t: 't'},
-		  {m: 'A vous de jouer !', l: 'l', t: 't'}
+		  {m: 'Level 2', l: '42%', t: '40%', s: 1000},
+		  {m: 'Time to turn!', l: 'l', t: 't', s: 1500},
+		  {m: 'Use icon <img src="./assets/img/rotate_right_red.png" class="icone"> to perform a quarter turn to the right.', l: 'l', t: 't', s: 1500},
+		  {m: 'Use icon <img src="./assets/img/rotate_left_red.png" class="icone"> to perform a quarter turn to the left.', l: 'l', t: 't', s: 1500},
+		  {m: 'Beware: the robot turns on its cell.', l: 'l', t: 't', s: 1500},
+		  {m: 'The patterns on the floor are here to help you.', l: 'l', t: 't'},
+		  {m: 'Let\'s go!', l: 'l', t: 't'}
 	  ],
 	  nbActionTotal: 24, 
       // instructions disponibles
@@ -94,7 +94,7 @@ var levels = [
 	  begin: [[1, 3], [1, 1]],
 	  end: [[1, 1], [1, 3]],
 	  angle: [180, 180],
-	  messages: [{m: 'Niveau 3', l: '40%', t: '40%'}],
+	  messages: [{m: 'Level 3', l: '40%', t: '40%'}],
 	  nbActionTotal: 20, 
       instructions: ['avancer','rotateLeft','rotateRight'],
       groupe: 1
@@ -112,7 +112,7 @@ var levels = [
 	  begin: [[6, 1], [6, 3]],
 	  end: [[0, 3], [0, 1]],
 	  angle: [0, 0],
-	  messages: [{m: 'Niveau 4', l: '40%', t: '40%'}],
+	  messages: [{m: 'Level 4', l: '40%', t: '40%'}],
       instructions: ['avancer','rotateLeft','rotateRight'],
 	  nbActionTotal: 38, 
       groupe: 1
@@ -130,7 +130,7 @@ var levels = [
 	  begin: [[1, 0], [1, 4]],
 	  end: [[1, 2], [1, 2]],
 	  angle: [180, 180],
-	  messages: [{m: 'Niveau 5', l: '40%', t: '40%'}],
+	  messages: [{m: 'Level 5', l: '40%', t: '40%'}],
 	  instructions: ['avancer','rotateLeft','rotateRight'],
 	  nbActionTotal: 36, 
       groupe: 1
@@ -155,9 +155,9 @@ var levels = [
 	  angle: [0, 0],
 	  // Liste des messages, positions, temps avant le prochain
 	  messages: [ 
-          {m: 'Niveau 6', l: '40%', t: '40%'},
-          {m: 'Les barrières électriques se désactivent en plaçant un robot sur l\'interrupteur de la même couleur.', l: '40%', t: '40%'},
-          {m: 'L\'instruction <img src="./assets/img/rest_red.png" class="icone"> permet de faire attendre le robot.', l: '40%', t: '40%'}
+          {m: 'Level 6', l: '40%', t: '40%'},
+          {m: 'Electric barriers can be deactivated by placing a robot on the switch with the same color.', l: '40%', t: '40%'},
+          {m: 'Icon <img src="./assets/img/rest_red.png" class="icone"> lets the robot still for a round.', l: '40%', t: '40%'}
       
       ],
 	  duoPreDoor:
@@ -185,7 +185,7 @@ var levels = [
 	  // Angle de depart
 	  angle: [90, 0],
 	  // Liste des messages, positions, temps avant le prochain
-	  messages: [{m: 'Niveau 7', l: '35%', t: '40%'}],
+	  messages: [{m: 'Level 7', l: '35%', t: '40%'}],
 	  duoPreDoor: [
 		  {pcvs: 1, pi: 3, pj: 4, pOn: 0, dcvs: 2, di: 2, dj: 4, dAngle: 90},
 		  {pcvs: 2, pi: 1, pj: 1, pOn: 0, dcvs: 1, di: 2, dj: 1, dAngle: 90}
@@ -213,7 +213,7 @@ var levels = [
 	  // Angle de depart
 	  angle: [00, 0],
 	  // Liste des messages, positions, temps avant le prochain
-	  messages: [{m: 'Niveau 8', l: '40%', t: '40%'}],
+	  messages: [{m: 'Level 8', l: '40%', t: '40%'}],
 	  duoPreDoor: [
 		  {pcvs: 1, pi: 2, pj: 4, pOn: 0, dcvs: 2, di: 3, dj: 4, dAngle: 135},
 		  {pcvs: 2, pi: 1, pj: 3, pOn: 0, dcvs: 1, di: 2, dj: 1, dAngle: 135}
@@ -242,7 +242,7 @@ var levels = [
 	  angle: [180, 270],
 	  // Liste des messages, positions, temps avant le prochain
 	  messages: [
-		  {m: 'Niveau 9', l: '40%', t: '40%', s: 1000},
+		  {m: 'Level 9', l: '40%', t: '40%', s: 1000},
 		  {m: 'Dance Revolution !!', l: 'l', t: 't'}
 	  ],
 	  duoPreDoor: [
@@ -273,7 +273,7 @@ var levels = [
 	  // Angle de depart
 	  angle: [180, 0],
 	  // Liste des messages, positions, temps avant le prochain
-	  messages: [{m: 'Niveau 10', l: '40%', t: '40%'}],
+	  messages: [{m: 'Level 10', l: '40%', t: '40%'}],
 	  duoPreDoor: [
 		  {pcvs: 2, pi: 2, pj: 4, pOn: 0, dcvs: 1, di: 2, dj: 3, dAngle: 0},
 		  {pcvs: 1, pi: 1, pj: 5, pOn: 0, dcvs: 2, di: 3, dj: 2, dAngle: 0},
@@ -303,10 +303,10 @@ var levels = [
 	  angle: [180, 0],
 	  // Liste des messages, positions, temps avant le prochain
 	  messages: [
-		  {m: 'Niveau 11', l: '40%', t: '40%', s: 1000},
-		  {m: 'Tu peux ramasser des boîtes...', l: 'l', t: 't', s: 1000},
-		  {m: 'et les déposer sur des plaques pour débloquer les barrières.', l: 'l', t: 't', s: 1000},
-		  {m: 'L\'instruction <img src="./assets/img/pickup_red.png" class="icone"> permet de prendre/déposer la boîte sur la case où se trouve le robot', l: 'l', t: 't', s: 1000}
+		  {m: 'Level 11', l: '40%', t: '40%', s: 1000},
+		  {m: 'You can pick up boxes...', l: 'l', t: 't', s: 1000},
+		  {m: 'and drop them on plates to unlock barriers.', l: 'l', t: 't', s: 1000},
+		  {m: 'With instruction <img src="./assets/img/pickup_red.png" class="icone"> the robot can pick up/drop the box on its current cell.', l: 'l', t: 't', s: 1000}
 	  ],
 	  duoPreDoor: [
 		  {pcvs: 1, pi: 2, pj: 2, pOn: 0, dcvs: 1, di: 2, dj: 4, dAngle: 0},
@@ -338,7 +338,7 @@ var levels = [
 	  // Angle de depart
 	  angle: [0, 0],
 	  // Liste des messages, positions, temps avant le prochain
-	  messages: [{m: 'Niveau 12', l: '40%', t: '40%'}],
+	  messages: [{m: 'Level 12', l: '40%', t: '40%'}],
 	  duoPreDoor: [
 		  {pcvs: 1, pi: 1, pj: 3, pOn: 0, dcvs: 2, di: 2, dj: 2, dAngle: 0},
 		  {pcvs: 2, pi: 3, pj: 3, pOn: 0, dcvs: 1, di: 2, dj: 2, dAngle: 0}
@@ -369,7 +369,7 @@ var levels = [
 	  // Angle de depart
 	  angle: [0, 0],
 	  // Liste des messages, positions, temps avant le prochain
-	  messages: [{m: 'Niveau 13', l: '40%', t: '40%'}],
+	  messages: [{m: 'Level 13', l: '40%', t: '40%'}],
 	  duoPreDoor: [
 		  {pcvs: 1, pi: 3, pj: 3, pOn: 0, dcvs: 2, di: 2, dj: 2, dAngle: 0},
 		  {pcvs: 1, pi: 1, pj: 4, pOn: 0, dcvs: 1, di: 2, dj: 2, dAngle: 0},
@@ -404,7 +404,7 @@ var levels = [
 	  // Angle de depart
 	  angle: [0, 0],
 	  // Liste des messages, positions, temps avant le prochain
-	  messages: [{m: 'Niveau 14', l: '40%', t: '40%'}],
+	  messages: [{m: 'Level 14', l: '40%', t: '40%'}],
 	  duoPreDoor: [
 		  {pcvs: 1, pi: 2, pj: 3, pOn: 0, dcvs: 1, di: 0, dj: 2, dAngle: 90},
 		  {pcvs: 1, pi: 2, pj: 2, pOn: 0, dcvs: 2, di: 4, dj: 2, dAngle: 90},
@@ -439,7 +439,7 @@ var levels = [
 	  // Angle de depart
 	  angle: [0, 0],
 	  // Liste des messages, positions, temps avant le prochain
-	  messages: [{m: 'Niveau 15', l: '40%', t: '40%'}],
+	  messages: [{m: 'Level 15', l: '40%', t: '40%'}],
 	  duoPreDoor: [
 		  {pcvs: 1, pi: 1, pj: 4, pOn: 0, dcvs: 2, di: 3, dj: 3, dAngle: 0},
 		  {pcvs: 2, pi: 3, pj: 4, pOn: 0, dcvs: 1, di: 1, dj: 3, dAngle: 0},
@@ -475,9 +475,9 @@ var levels = [
 	  angle: [0, 0],
 	  // Liste des messages, positions, temps avant le prochain
 	  messages: [
-          {m: 'Niveau 16', l: '40%', t: '40%'},
-          {m: 'Tu peux passer des boîtes à l\'autre robot avec les téléporteurs.', l: 'l', t: 't', s: 1000},
-          {m: 'Dépose la boîte sur l\'entrée du téléporteur pour la transférer de l\'autre côté.', l: 'l', t: 't', s: 1000}
+          {m: 'Level 16', l: '40%', t: '40%'},
+          {m: 'You can send boxes to the other robot using teleporters.', l: 'l', t: 't', s: 1000},
+          {m: 'Drop the box on the teleporter entry to transfer it to the other side.', l: 'l', t: 't', s: 1000}
       ],
 	  // Boites
 	  boxes: [{cvs: 1, i: 2, j: 4, droped: true}],
@@ -519,7 +519,7 @@ var levels = [
 	  angle: [0, 0],
 	  // Liste des messages, positions, temps avant le prochain
 	  messages: [
-		  {m: 'Niveau 17', l: '40%', t: '40%'},
+		  {m: 'Level 17', l: '40%', t: '40%'},
 	  ],
 	  duoPreDoor:
 		  [{pcvs: 2, pi: 1, pj: 3, pOn: 0, dcvs: 2, di: 1, dj: 2, dAngle: 0}],
@@ -557,7 +557,7 @@ var levels = [
 	  angle: [0, 0],
 	  // Liste des messages, positions, temps avant le prochain
 	  messages: [
-		  {m: 'Niveau 18', l: '40%', t: '40%'},
+		  {m: 'Level 18', l: '40%', t: '40%'},
 	  ],
 	  duoPreDoor: [
 		  {pcvs: 2, pi: 3, pj: 3, pOn: 0, dcvs: 2, di: 2, dj: 3, dAngle: 90},
@@ -612,7 +612,7 @@ var levels = [
 	  angle: [270, 90],
 	  // Liste des messages, positions, temps avant le prochain
 	  messages: [
-		  {m: 'Niveau 19', l: '40%', t: '40%'},
+		  {m: 'Level 19', l: '40%', t: '40%'},
 	  ],
 	  duoPreDoor: [
 		  {pcvs: 1, pi: 3, pj: 3, pOn: 0, dcvs: 2, di: 2, dj: 3, dAngle: 90},
@@ -652,7 +652,7 @@ var levels = [
 	  angle: [0, 0],
 	  // Liste des messages, positions, temps avant le prochain
 	  messages: [
-		  {m: 'Niveau 20', l: '40%', t: '40%'},
+		  {m: 'Level 20', l: '40%', t: '40%'},
 	  ],
 	  duoPreDoor: [
 		  {pcvs: 2, pi: 2, pj: 3, pOn: 0, dcvs: 2, di: 2, dj: 2, dAngle: 0},
@@ -789,12 +789,12 @@ var isPlaying = 0;      // 0 : jeu en pause (pas de render dans la boucle de jeu
 
 // Config
 var multiplicateurPolice = 0.1; // Taille de la police en fonction de la hauteur
-var messageFinLevel		 = 'Félicitations !!!';
-var messageUnPasFini	 = 'Un sur deux !';
+var messageFinLevel		 = 'Congratulations!';
+var messageUnPasFini	 = 'One out of two!';
 var tempsEntreLevel		 = 3000; // (ms)
 var tempsEntreUpdate	 = 1000; // (ms)
-var messageErreurExec	= 'Finissez avant de lancer';
-var messageNote			 = ['Tu peux mieux faire !', 'Presque !', 'Parfait !'];
+var messageErreurExec	= 'Finish before executing';
+var messageNote			 = ['You can do better!', 'Almost there!', 'Perfect!'];
 var fps					 = 60;
 var afficheMessages		 = false;
 var cptRender			 = 0;

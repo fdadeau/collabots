@@ -9,7 +9,7 @@ function Stage(level)
 	this.decal = 0;
 	if (level >= levels.length)
 	{
-		console.log('!!! level ' + level + ' existe pas !!!');
+		console.log('!!! level ' + level + ' does not exist !!!');
         return;
 	}
 	this.level = level;
