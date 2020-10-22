@@ -72,7 +72,7 @@ var levels = [
 		  {m: 'Time to turn!', l: 'l', t: 't', s: 1500},
 		  {m: 'Use icon <img src="./assets/img/rotate_right_red.png" class="icone"> to perform a quarter turn to the right.', l: 'l', t: 't', s: 1500},
 		  {m: 'Use icon <img src="./assets/img/rotate_left_red.png" class="icone"> to perform a quarter turn to the left.', l: 'l', t: 't', s: 1500},
-		  {m: 'Beware: the robot turns on its cell.', l: 'l', t: 't', s: 1500},
+		  {m: 'Warning: the robot remains on its cell to turn.', l: 'l', t: 't', s: 1500},
 		  {m: 'The patterns on the floor are here to help you.', l: 'l', t: 't'},
 		  {m: 'Let\'s go!', l: 'l', t: 't'}
 	  ],
