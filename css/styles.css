@@ -1,0 +1,494 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    width: 100%;
+    height: 100%;
+	overflow: hidden;
+}
+
+#middle {
+	height: 100%;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/************************************************************************
+                    FEUILLE DE STYLE DE L'APPLICATION 
+*************************************************************************/
+
+
+/*** Zones utilisateur (j1=gauche/j2=droite) ***/ 
+#j1,
+#j2 {
+	position: fixed;
+	box-sizing: border-box;
+	height: 100%;
+    width: 50%;
+	top: 0px;
+    background-image: url('../assets/img/fond.png');
+	background-size: cover;
+}
+#j1 {
+    left: 0px;
+}
+#j2 {
+	right: 0px;
+}
+
+/*** Canvas pour le dessin ***/
+canvas {
+	position: absolute;
+    /*width: 100%;
+    height: 100%;*/
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    
+}
+
+/*
+#cvs1,
+#cvs1_back {
+	right: 1%;
+}
+
+#cvs2,
+#cvs2_back {
+	left: 1%;
+}
+*/
+
+/*** Boutons pour editer les programmes (1:gauche/2:droite) ***/
+#boutonCommands1, #boutonCommands2 {
+	z-index: 30;
+	position: absolute;
+	height: auto;
+	width: 10%;
+    bottom: 10px;
+}
+#boutonCommands1 {
+	left: 3%;
+}
+#boutonCommands2 {
+	right: 3%;
+}
+
+
+/*** Boutons execution et menu ***/
+#boutonExec, #menu_mobile {
+	position: fixed;
+	z-index: 1;
+    width: 6%;
+    height: auto;
+    left: 47%;
+}
+#boutonExec {
+    top: 47%;
+}
+#menu_mobile {
+    background-color: black;
+    border: solid 1px grey;
+    border-radius: 5px;
+    bottom: 5px;
+}
+
+
+/**** Zones des commandes - zone d'edition (j$exec) + selection des commandes (j$select) (1:gauche/2:droite) ****/
+#j1commands, #j2commands {
+	position: absolute;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+	z-index: 10;
+	top: 0px;
+    display: none;
+}
+#j1commands {
+	background-color: rgba(115, 8, 0, 0.5);
+    left: 0;
+}
+#j2commands {
+	background-color: rgba(34, 66, 124, 0.5);
+    right: 0;
+}
+
+
+/*** Zones de saisie du programme (1:gauche,2:droite) ***/
+#j1exec, #j2exec {
+	position: relative;
+	width: 100%;
+    box-sizing: border-box;
+	height: 50%;
+    margin-top: 10px;
+    top: 15%;
+}
+#j1exec {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+#j2exec {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+#j1exec .pictoj1, #j2exec .pictoj2 {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+
+
+/*** Zones de sélection des commandes du programme (1:gauche,2:droite) ***/
+#j1selectcommands, #j2selectcommands {
+    box-sizing: border-box;
+	position: absolute;
+    bottom: 0;
+	width: 100%;
+	height: 30%;
+}
+#j1selectcommands {
+    left: 0;
+    text-align: center;
+    padding-left: 10px;
+	background-color: rgba(115, 8, 0, 0.5);
+}
+
+#j2selectcommands {
+    right: 0;
+    text-align: center;
+    padding-right: 10px;
+	background-color: rgba(34, 66, 124, 0.5);
+}
+
+
+/*** Zones avec les instructions courantes ***/
+#instructionCourante1, #instructionCourante2 {
+	z-index: 4;
+    box-sizing: border-box;
+	position: absolute;
+	top: 0px;
+    width: 100%;
+    padding-left: 30%;
+    padding-top: 5px;
+    min-height: 13%;
+    display: none;
+}
+#instructionCourante1 {
+	left: 0px;
+    background-color: rgba(115, 8, 0, 0.5);
+}
+#instructionCourante2 {
+	right: 0px;
+	background-color: rgba(34, 66, 124, 0.5);
+}
+
+
+
+/** Pictogrammes pour les commandes à choisir pour composer le programme **/
+.pictoj1,
+.pictoj2 {
+	margin-top: 5%;
+    width: 10%;
+    height: auto;
+    margin-right: 10px;
+}
+
+/** Boutons pour effacer (poubelles - 1:gauche/2:droite) **/
+.cancel {
+    width: 10%;
+	position: absolute;
+	display: block;
+    bottom: 10%;
+}
+#cancel1 {
+    right: 10%;
+}
+#cancel2 {
+    left: 10%;
+}
+
+
+/** Pictogrammes pour les instructions courantes **/
+#instructionCourante1 img, #instructionCourante2 img {
+    width: 10%;
+    height: auto;
+    opacity: 1;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+#instructionCourante1 img:first-of-type, #instructionCourante2 img:first-of-type {
+    width: 15%;
+    height: auto;
+}
+
+
+
+/** Neon central --> à enlever à l'occasion ? */
+#middle {
+	top: 0;
+	position: absolute;
+	z-index: 1;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 180px;
+    height: 100%;
+	pointer-events: none;
+}
+
+.message {
+	z-index: 2;
+	background-repeat: no-repeat;
+	background-image: url('../assets/img/info.png');
+	position: absolute;
+	padding: 30px 35px 30px 35px;
+	background-color: #DBB569;
+	color: white;
+	border-style: solid; /* dashed */
+	border-width: 5px;
+	border-color: red;
+	border-radius: 20px;
+	text-align: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	/* Ca c'est pour le lols */
+	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.fin {
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+
+.notation {
+	margin: 30px 10px 20px 10px;
+	border: solid white 2px;
+}
+
+.message p {
+	margin-bottom: 50px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btn_suivant {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color: #599bb3;
+	border-radius: 8px;
+	cursor: pointer;
+	font-family: Arial;
+	font-weight: bold;
+	padding: 13px 32px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #3d768a;
+}
+
+
+
+#menu_principal {
+	position: absolute;
+	background-color: #DBB569;
+	display: block;
+	z-index: 4000;
+	margin: 2%;
+	border-style: dashed;
+	border-width: 15px;
+	border-color: red;
+	border-radius: 50px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#menu_principal #quitter_menu {
+	right: 0;
+	position: absolute;
+	top: 5%;
+	transform: translateY(-50%);
+}
+
+#menu_principal #page_left {
+	position: absolute;
+	top: 80%;
+	transform: translateY(-50%);
+}
+
+#menu_principal #page_right {
+	right: 0;
+	position: absolute;
+	top: 80%;
+	transform: translateY(-50%);
+}
+
+#menu_principal #boutons_menu{
+	left: 0;
+	top : 6%;
+	position: absolute;
+	transform: translateY(-50%);
+	display: inline;
+}
+#menu_principal #boutons_menu img{
+	margin-top: 20px;
+	width: 10%;
+	height: 10%;
+}
+
+#menu_principal #niveau {
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	width: 100%;
+	position: relative;
+	height: 100%;
+	padding-top: 8%;
+}
+
+#menu_principal #niveau div {
+	display: inline-block;
+	margin: 1%;
+}
+
+#menu_titre {
+	font-size: 200px;
+	text-align: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
