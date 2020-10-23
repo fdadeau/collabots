@@ -1,5 +1,3 @@
-# collabots
-
 Collabots is a collaborative programming learning game in which two players have to  program robots which move on an area in order to reach a specific destination cell. Robots may interact together by deactivating barriers, and sending objets to each other, to help one and the other reach their destination. 
 This game is intended to be used mainly by 7-12 year old children, to initiate them to programming in a funny and collaborative way. 
 
