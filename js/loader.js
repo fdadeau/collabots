@@ -42,7 +42,7 @@ function loadAssets()
             draw();
         });
         images.loadManifest(imagesManifest);        
-        createjs.Sound.play("Collabots");
+       // createjs.Sound.play("Collabots");
     });
 	sounds.loadManifest(soundsManifest);
 }
