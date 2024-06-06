@@ -798,9 +798,9 @@ var messageNote			 = ['You can do better!', 'Almost there!', 'Perfect!'];
 var fps					 = 60;
 var afficheMessages		 = false;
 var cptRender			 = 0;
-var vitesseBot			 = 600; // ms deplacement 1 case
+var vitesseBot			 = 400; // ms deplacement 1 case
 var angleDandine		 = 30;
-var vitesseRotationTele  = 2000; // ms pour un tour
+var vitesseRotationTele  = 1200; // ms pour un tour
 var tempsDecalageBot	 = tempsEntreUpdate / 2;
 // Gestion des sons
 var activerMusique		 = true;
